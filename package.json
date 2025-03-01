@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "mqtt": "^5.10.4"
+  },
+  "scripts": {
+    "start": "node src/main.js"
+  }
+}
