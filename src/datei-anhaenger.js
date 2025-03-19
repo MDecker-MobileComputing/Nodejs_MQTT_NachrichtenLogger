@@ -14,7 +14,7 @@ export default class DateiAnhaenger {
      * @param {string} prefix - Präfix für den Dateinamen, z.B. "schlagzeilen-inland";
      *                          an das Präfix wird das Datum und die Uhrzeit angehängt,
      *                          die Datei bekommt die Endung ".txt".
-     *                          Beispielname: "schlagzeilen-inland-2021-12-31_23-59-59.txt"
+     *                          Beispielname: "schlagzeilen-inland-2025-03-31_21-22-01.txt"
      */
     constructor( prefix ) {
 
@@ -38,7 +38,7 @@ export default class DateiAnhaenger {
 
             await fs.appendFile( this.dateiname, 
                                  zeile + "\n", 
-                                 "utf8"
+                                 "utf8" // Kodierung (für Umlaute)
                                );
 
         } catch ( fehler ) {
