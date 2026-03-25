@@ -1,4 +1,5 @@
 
 node_modules/
 
+# Von Anwendung erstellte Log-Dateien
 *.txt
