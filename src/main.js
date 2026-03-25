@@ -1,15 +1,16 @@
-import mqtt              from "mqtt";
+import mqtt from "mqtt";
+
 import DateiAnhaenger    from "./datei-anhaenger.js";
 import mqttKonfiguration from "../mqtt-konfiguration.js";
 
 
 const authObjekt = {
-  
+
     username: mqttKonfiguration.nutzername,
     password: mqttKonfiguration.passwort
 }
-  
-const mqttClient = await mqtt.connectAsync( mqttKonfiguration.url, 
+
+const mqttClient = await mqtt.connectAsync( mqttKonfiguration.url,
                                             authObjekt );
 
 const inlandsDatei  = new DateiAnhaenger( "schlagzeilen-inland"  );
